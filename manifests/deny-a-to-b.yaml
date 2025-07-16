@@ -9,10 +9,10 @@ spec:
   ingress:
   - from:
     - podSelector:
-        matchLabels:
-          app: service-a
-    ports:
-    - protocol: TCP
-      port: 80
+        matchExpressions:
+        - key: app
+          operator: NotIn
+          values:
+          - service-a
   policyTypes:
   - Ingress

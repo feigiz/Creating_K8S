@@ -5,4 +5,4 @@ COPY main.py .
 
 RUN pip install requests flask
 
-CMD ["python", "main.py"]
+CMD ["python", "-u", "main.py"]
